@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Disable tunnelled clear text passwords
+sed -i.org -e "s/#PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ssh/sshd_config
+service ssh restart
+
+# Change to Japanese locale
+aptitude -y install language-pack-ja-base language-pack-ja
+update-locale LANG=ja_JP.UTF-8 LANGUAGE="ja_JP:ja"
+
+
+# Change to JST time zone
+rm -f /etc/localtime
+ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+
+
+# Configure Linux Firewall
+# --- CAUTION --- Change to deny access from public address
+ufw allow from 10.0.0.0/8
+echo y | ufw enable
+
+# Install basic tools
+apt-get install -y curl vim make git emacs23
