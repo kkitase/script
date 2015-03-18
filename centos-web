@@ -25,4 +25,5 @@ service iptables save
 
 # Install basic tools
 yum install -y emacs.x86_64 git-all.noarch httpd cifs-utils php php-mysql php-mbstring
+chkconfig mysqld on
 service httpd start
