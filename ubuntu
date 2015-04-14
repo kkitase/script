@@ -16,8 +16,8 @@ ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 # Configure Linux Firewall
 # --- CAUTION --- Change to deny access from public address
-ufw allow from 10.0.0.0/8
-echo y | ufw enable
+# ufw allow from 10.0.0.0/8
+# echo y | ufw enable
 
 # Install basic tools
 apt-get install -y curl vim make git emacs23
