@@ -27,6 +27,6 @@ iptables -A INPUT -s 0.0.0.0/0 -d 0.0.0.0/0 -p all -j REJECT
 service iptables save
 
 # Install basic tools
-yum install -y emacs.x86_64 git-all.noarch httpd cifs-utils php php-mysql php-mbstring
-chkconfig httpd on
-service httpd start
+# yum install -y emacs.x86_64 git-all.noarch httpd cifs-utils php php-mysql php-mbstring
+# chkconfig httpd on
+# service httpd start
