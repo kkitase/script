@@ -7,7 +7,6 @@ yum update -y
 wget http://ftp.riken.jp/Linux/fedora/epel/RPM-GPG-KEY-EPEL-6
 rpm --import RPM-GPG-KEY-EPEL-6
 rm -f RPM-GPG-KEY-EPEL-6
-vi /etc/yum.repos.d/epel.repo
 echo '[epel]' >> /etc/yum.repos.d/epel.repo
 echo 'name=EPEL RPM Repository for Red Hat Enterprise Linux' >> /etc/yum.repos.d/epel.repo
 echo 'baseurl=http://ftp.riken.jp/Linux/fedora/epel/6/$basearch/' >> /etc/yum.repos.d/epel.repo
