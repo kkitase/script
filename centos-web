@@ -41,4 +41,4 @@ service iptables save
 # yum install -y emacs.x86_64 git-all.noarch httpd cifs-utils php php-mysql php-mbstring
 # chkconfig httpd on
 # service httpd start
-yum install iperf
+yum install iperf --enablerepopel
