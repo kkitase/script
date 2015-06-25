@@ -18,7 +18,7 @@ sed -i.org -e "s/PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ss
 service sshd restart
 
 # Change to Japanese locale
-yum -y groupinstall "Japanese Support" 
+yum groupinstall "Japanese Support" -y 
 sed -i.org -e "s/en_US.UTF-8/ja_JP.UTF-8/g" /etc/sysconfig/i18n
 
 # Change to JST time zone
@@ -29,7 +29,7 @@ ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 # yum install -y emacs.x86_64 git-all.noarch httpd cifs-utils php php-mysql php-mbstring
 # chkconfig httpd on
 # service httpd start
-yum install iperf --enablerepo=epel
+yum install iperf --enablerepo=epel -y
 
 # Configure Linux Firewall
 # --- CAUTION --- Change to deny access from public address
