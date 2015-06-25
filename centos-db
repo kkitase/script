@@ -8,7 +8,7 @@ sed -i.org -e "s/PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ss
 service sshd restart
 
 # Change to Japanese locale
-yum -y groupinstall "Japanese Support" 
+yum groupinstall "Japanese Support" -y
 sed -i.org -e "s/en_US.UTF-8/ja_JP.UTF-8/g" /etc/sysconfig/i18n
 
 # Change to JST time zone
