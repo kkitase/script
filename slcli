@@ -1,1 +1,2 @@
-slcli vs create --cpu=1 --memory=1024 --os=CENTOS_LATEST --billing=hourly --datacenter=scj01 --disk=25 --disk=25 --hostname=centos7 --domain=handson.jp
+slcli vs create --cpu=1 --memory=1024 --os=CENTOS_LATEST --billing=hourly --datacenter=scj01 --disk=25 --disk=25 --hostname=centos1 --domain=handson.jp
+slcli vs create --cpu=1 --memory=1024 --os=CENTOS_LATEST --billing=hourly --datacenter=scj01 --disk=25 --disk=25 --hostname=centos2 --domain=handson.jp
