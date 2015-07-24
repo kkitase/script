@@ -14,8 +14,8 @@ echo 'gpgcheck=1' >> /etc/yum.repos.d/epel.repo
 echo 'enabled=0' >> /etc/yum.repos.d/epel.repo
 
 # Disable tunnelled clear text passwords
-sed -i.org -e "s/PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ssh/sshd_config
-service sshd restart
+# sed -i.org -e "s/PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ssh/sshd_config
+# service sshd restart
 
 # Change to Japanese locale
 yum groupinstall "Japanese Support" -y 
