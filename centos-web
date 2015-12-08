@@ -26,10 +26,10 @@ rm -f /etc/localtime
 ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 # Install basic tools
-# yum install -y emacs.x86_64 git-all.noarch httpd cifs-utils php php-mysql php-mbstring
+# yum install iperf --enablerepo=epel -y
+yum install -y git-all.noarch httpd cifs-utils php php-mysql php-mbstring
 # chkconfig httpd on
 # service httpd start
-yum install iperf --enablerepo=epel -y
 
 # Configure Linux Firewall
 # --- CAUTION --- Change to deny access from public address
