@@ -67,4 +67,4 @@ iptables -A INPUT -p tcp --dport 1880 -j ACCEPT
 yum install epel-release -y
 yum install nodejs npm --enablerepo=epel -y
 # node-redのインストール
-npm install -g node-red -y
+npm install -g node-red
