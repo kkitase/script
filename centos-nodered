@@ -48,7 +48,9 @@ iptables -A INPUT -m state --state NEW -m udp -p udp --dport 1883 -j ACCEPT
 iptables -A INPUT -m state --state NEW -m udp -p udp --sport 1883 -j ACCEPT
 iptables -A INPUT -s 0.0.0.0/0 -d 0.0.0.0/0 -p all -j REJECT
 service iptables save
+
 # Install ZABBIX Agent
+
 # Install repository
 cd /etc/yum.repos.d
 wget http://download.opensuse.org/repositories/home:/oojah:/mqtt/CentOS_CentOS-6/home:oojah:mqtt.repo
@@ -56,3 +58,13 @@ wget http://download.opensuse.org/repositories/home:/oojah:/mqtt/CentOS_CentOS-6
 yum install mosquitto -y
 # Install client
 yum install mosquitto-clients -y
+
+# Install node.js, npm, node-red
+## 1880 Node-RED
+iptables -A INPUT -p tcp --dport 1880 -j ACCEPT
+
+# node.jsとnpmのインストール
+yum install epel-release -y
+yum install nodejs npm --enablerepo=epel -y
+# node-redのインストール
+npm install -g node-red -y
