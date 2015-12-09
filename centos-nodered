@@ -53,6 +53,6 @@ service iptables save
 cd /etc/yum.repos.d
 wget http://download.opensuse.org/repositories/home:/oojah:/mqtt/CentOS_CentOS-6/home:oojah:mqtt.repo
 # Install broker
-yum install mosquitto
+yum install mosquitto -y
 # Install client
-yum install mosquitto-clients
+yum install mosquitto-clients -y
