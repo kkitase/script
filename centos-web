@@ -33,6 +33,8 @@ yum install -y git-all.noarch httpd cifs-utils php php-mysql php-mbstring
 
 # Configure Linux Firewall
 # --- CAUTION --- Change to deny access from public address
+# 1883: Mosquitto
+# 5001: iperf
 iptables -A INPUT -s 10.0.0.0/8 -j ACCEPT
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A INPUT -p icmp -j ACCEPT
@@ -40,6 +42,10 @@ iptables -A INPUT -i lo -j ACCEPT
 iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
 iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
 iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 5001 -j ACCEPT
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 1883 -j ACCEPT
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --sport 1883 -j ACCEPT
+iptables -A INPUT -m state --state NEW -m tcp -p udp --dport 1883 -j ACCEPT
+iptables -A INPUT -m state --state NEW -m tcp -p udp --sport 1883 -j ACCEPT
 iptables -A INPUT -s 0.0.0.0/0 -d 0.0.0.0/0 -p all -j REJECT
 service iptables save
 
