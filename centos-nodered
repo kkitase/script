@@ -35,6 +35,7 @@ yum install -y git-all.noarch httpd cifs-utils php php-mysql php-mbstring
 # --- CAUTION --- Change to deny access from public address
 # 1883: Mosquitto
 # 5001: iperf
+# 1880: Node-RED
 iptables -A INPUT -s 10.0.0.0/8 -j ACCEPT
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A INPUT -p icmp -j ACCEPT
@@ -46,6 +47,9 @@ iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 1883 -j ACCEPT
 iptables -A INPUT -m state --state NEW -m tcp -p tcp --sport 1883 -j ACCEPT
 iptables -A INPUT -m state --state NEW -m udp -p udp --dport 1883 -j ACCEPT
 iptables -A INPUT -m state --state NEW -m udp -p udp --sport 1883 -j ACCEPT
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 1880 -j ACCEPT
+iptables -A INPUT -m state --state NEW -m tcp -p tcp --sport 1880 -j ACCEPT
+
 iptables -A INPUT -s 0.0.0.0/0 -d 0.0.0.0/0 -p all -j REJECT
 service iptables save
 
