@@ -63,3 +63,7 @@ yum install epel-release -y
 yum install nodejs npm --enablerepo=epel -y
 # Install node-red
 npm install -g node-red
+
+# End
+echo "Provisioning was successful." > /etc/motd
+history -c
