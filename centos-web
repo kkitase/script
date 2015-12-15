@@ -50,3 +50,7 @@ iptables -A INPUT -s 0.0.0.0/0 -d 0.0.0.0/0 -p all -j REJECT
 service iptables save
 
 # Install ZABBIX Agent
+
+# End 
+echo "Provisioning was successful." > /etc/motd
+history -c
