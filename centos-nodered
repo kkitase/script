@@ -65,10 +65,9 @@ yum install -y mongodb-org
 service mongod start
 chkconfig mongod on
 
-# Install repository
+# Install broker
 cd /etc/yum.repos.d
 wget http://download.opensuse.org/repositories/home:/oojah:/mqtt/CentOS_CentOS-6/home:oojah:mqtt.repo
-# Install broker
 yum install mosquitto -y
 chkconfig mosquitto on
 
@@ -78,7 +77,8 @@ yum install mosquitto-clients -y
 # Install node.js and npm
 yum install epel-release -y
 yum install nodejs npm --enablerepo=epel -y
-# Install node-red
+
+# Install node-red, mongo node
 npm install -g node-red
 npm install -g node-red-node-mongodb
 npm install -g node-red-contrib-mongodb2
