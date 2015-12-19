@@ -84,7 +84,6 @@ npm install -g node-red
 # End
 echo "****************************************************************************" >> /etc/motd
 echo "  Provisioning was successful" >> /etc/motd
-echo "  Start mosquitto: /usr/sbin/mosquitto" >> etc/motd
 echo "  Start node-red: node-red and access http://<ipaddress>:1880" >> /etc/motd
 echo "  Comment out bindIp in /etc/mongod.conf" >> /etc/motd
 echo "  Restart mongod: service mongod restart" >> /etc/motd
