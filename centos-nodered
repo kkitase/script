@@ -80,13 +80,13 @@ yum install epel-release -y
 yum install nodejs npm --enablerepo=epel -y
 # Install node-red
 npm install -g node-red
-npm install node-red-node-mongodb
-npm install node-red-contrib-mongodb2
+npm install -g node-red-node-mongodb
+npm install -g node-red-contrib-mongodb2
 
 # End
 echo "****************************************************************************" >> /etc/motd
 echo "  Provisioning was successful" >> /etc/motd
-echo "  Start node-red: node-red and access http://<ipaddress>:1880" >> /etc/motd
 echo "  Comment out bindIp in /etc/mongod.conf and restart mongod: service mongod restart" >> /etc/motd
+echo "  Start node-red: node-red and access http://<ipaddress>:1880" >> /etc/motd
 echo "****************************************************************************" >> /etc/motd
 history -c
