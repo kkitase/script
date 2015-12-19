@@ -80,6 +80,8 @@ yum install epel-release -y
 yum install nodejs npm --enablerepo=epel -y
 # Install node-red
 npm install -g node-red
+npm install node-red-node-mongodb
+npm install node-red-contrib-mongodb2
 
 # End
 echo "****************************************************************************" >> /etc/motd
