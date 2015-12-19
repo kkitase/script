@@ -69,6 +69,7 @@ chkconfig mongod on
 cd /etc/yum.repos.d
 wget http://download.opensuse.org/repositories/home:/oojah:/mqtt/CentOS_CentOS-6/home:oojah:mqtt.repo
 yum install mosquitto -y
+/usr/sbin/mosquitto & 
 chkconfig mosquitto on
 
 # Install client
@@ -82,6 +83,7 @@ yum install nodejs npm --enablerepo=epel -y
 npm install -g node-red
 npm install -g node-red-node-mongodb
 npm install -g node-red-contrib-mongodb2
+node-red &
 
 # End
 echo "****************************************************************************" >> /etc/motd
@@ -89,7 +91,7 @@ echo "  Provisioning was successful" >> /etc/motd
 echo "  1) Start mosquitto: /usr/sbin/mosquitto and" >> /etc/motd 
 echo "     Subscribe and send msg: mosquitto_pub -d -t hello -m "Hello world"" >> /etc/motd
 echo "  2) Comment out bindIp in /etc/mongod.conf and" >> /etc/motd
-echo "     restart mongod: service mongod restart" >> /etc/motd
+echo "     restart mongod: service mongod start" >> /etc/motd
 echo "  3) Start node-red: node-red and access http://<IP>:1880" >> /etc/motd
 echo "****************************************************************************" >> /etc/motd
 history -c
