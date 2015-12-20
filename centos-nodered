@@ -89,7 +89,7 @@ node-red &
 echo "****************************************************************************" >> /etc/motd
 echo "  Provisioning was successful" >> /etc/motd
 echo "  1) Start mosquitto: /usr/sbin/mosquitto and" >> /etc/motd 
-echo "     Subscribe and send msg: mosquitto_pub -d -t hello -m "Hello world"" >> /etc/motd
+echo "     Subscribe and send msg: mosquitto_pub -d -t hello -m Hello world" >> /etc/motd
 echo "  2) Comment out bindIp in /etc/mongod.conf and" >> /etc/motd
 echo "     restart mongod: service mongod start" >> /etc/motd
 echo "  3) Start node-red: node-red and access http://<IP>:1880" >> /etc/motd
