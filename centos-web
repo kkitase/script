@@ -28,8 +28,8 @@ ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 # Install basic tools
 # yum install iperf --enablerepo=epel -y
 yum install -y git-all.noarch httpd cifs-utils php php-mysql php-mbstring
-# chkconfig httpd on
-# service httpd start
+chkconfig httpd on
+service httpd start
 
 # Configure Linux Firewall
 # --- CAUTION --- Change to deny access from public address
