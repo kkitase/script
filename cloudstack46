@@ -46,8 +46,8 @@ mv vhd-util /usr/share/cloudstack-common/scripts/vm/hypervisor/xenserver/
 
 # Install MySQL
 yum install mysql-server -y
-chkconfig mysql-server on
-service mysql-server start
+chkconfig mysqld on
+service mysqld start
 
 # Install CloudStack management server
 yum install cloudstack-management -y
