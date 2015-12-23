@@ -40,6 +40,10 @@ yum install ntp -y
 chkconfig ntpd on
 service ntpd start
 
+# install vhd-util (XenServerを利用する時のみ)
+wget http://download.cloud.com.s3.amazonaws.com/tools/vhd-util
+mv vhd-util /usr/share/cloudstack-common/scripts/vm/hypervisor/xenserver/
+
 # Install MySQL
 yum install mysql-server -y
 chkconfig mysql-server on
