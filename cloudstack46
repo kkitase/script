@@ -74,10 +74,10 @@ service iptables save
 # End
 echo "****************************************************************************" >> /etc/motd
 echo "  Provisioning was successful" >> /etc/motd
-echo "  1) Setup OS (Network, NTP)
-echo "  2) Setup MySQL server
-echo "  3) Setup cloudstack manaement
-echo "  4) Setup NFS
-echo "  5) Access http://ipaddress:8080/client/
+echo "  1) Setup OS (Network, NTP)" >> /etc/motd
+echo "  2) Setup MySQL server" >> /etc/motd
+echo "  3) Setup cloudstack manaement" >> /etc/motd
+echo "  4) Setup NFS" >> /etc/motd
+echo "  5) Access http://ipaddress:8080/client/" >> /etc/motd
 echo "****************************************************************************" >> /etc/motd
 history -c
