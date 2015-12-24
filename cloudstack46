@@ -79,9 +79,8 @@ service iptables save
 echo "****************************************************************************" >> /etc/motd
 echo "  Provisioning was successful" >> /etc/motd
 echo "  1) Setup OS (Network, NTP)" >> /etc/motd
-echo "  2) Setup MySQL server" >> /etc/motd
-echo "  3) Setup cloudstack manaement" >> /etc/motd
-echo "  4) Setup NFS" >> /etc/motd
-echo "  5) Access http://ipaddress:8080/client/" >> /etc/motd
+echo "  2) Check accessibility to Primary and Secondary storages" >> /etc/motd
+echo "  3) Download System VM template" >> /etc/motd
+echo "  4) Access http://ipaddress:8080/client/ and setup cloudstack network" >> /etc/motd
 echo "****************************************************************************" >> /etc/motd
 history -c
