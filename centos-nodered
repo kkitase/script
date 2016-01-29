@@ -69,8 +69,8 @@ chkconfig mongod on
 cd /etc/yum.repos.d
 wget http://download.opensuse.org/repositories/home:/oojah:/mqtt/CentOS_CentOS-6/home:oojah:mqtt.repo
 yum install mosquitto -y
-/usr/sbin/mosquitto & 
-chkconfig mosquitto on
+# /usr/sbin/mosquitto &
+# chkconfig mosquitto on
 
 # Install client
 yum install mosquitto-clients -y
